@@ -1,33 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Stats preview card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Stats preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
 
-  Get insights that help your business grow.
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
+  <body>
+    <div class="card">
+      <picture class="card__image">
+        <source
+          media="(min-width: 600px)"
+          srcset="./images/image-header-desktop.jpg"
+        />
+        <img
+          src="./images/image-header-mobile.jpg"
+          alt="People working in an open office space"
+        />
+      </picture>
+      <article class="card__body">
+        <h2 class="card__title">Get <span class="accent">insights</span> that help your business grow.</h2>
 
-  10k+ companies
-  314 templates
-  12m+ queries
+        <p class="card__copy-text">
+          Discover the benefits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficiency.
+        </p>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://www.frontendmentor.io/profile/marisudris">Māris Ūdris</a>.
-  </div>
-</body>
+        <div class="card__stats">
+          <div class="card__stat">
+            10k+ <span class="card__stat-heading">companies</span>
+          </div>
+          <div class="card__stat">
+            314 <span class="card__stat-heading">templates</span>
+          </div>
+          <div class="card__stat">
+            12M+ <span class="card__stat-heading">queries</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/marisudris">Māris Ūdris</a
+      >.
+    </div>
+  </body>
 </html>
