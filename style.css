@@ -26,6 +26,7 @@ p {
   --card-bg: hsl(244, 38%, 16%);
 
   --accent: hsl(277, 64%, 61%);
+  --img-filter: hsl(277, 84%, 31%);
 
   --font-family: "Inter", sans-serif;
   --font-family-stats: "Lexend Deca", sans-serif;
@@ -36,4 +37,99 @@ body {
   background-color: var(--main-bg);
   color: var(--main-copy);
   font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  place-content: center;
+  margin: 10vh 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card__image {
+  max-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  position: relative;
+}
+
+.card__image::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--img-filter);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.card__body {
+  color: var(--main-copy);
+  background-color: var(--card-bg);
+  padding: 2.625rem;
+  text-align: center;
+}
+
+.card__title {
+  color: var(--main);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.card__copy {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 1.375rem;
+}
+
+.card__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.card__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--main);
+}
+
+.card__stat-figure {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card__stat-heading {
+  color: var(--main-stat-headings);
+  font-family: var(--font-family-stats);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.attribution {
+  padding: 1.25rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
