@@ -26,7 +26,7 @@ p {
   --card-bg: hsl(244, 38%, 16%);
 
   --accent: hsl(277, 64%, 61%);
-  --img-filter: hsl(277, 84%, 31%);
+  --img-filter: #682097;
 
   --font-family: "Inter", sans-serif;
   --font-family-stats: "Lexend Deca", sans-serif;
@@ -47,23 +47,25 @@ body {
 main {
   flex: 1;
   display: grid;
-  place-content: center;
+  justify-items: center;
+  align-content: center;
   margin: 10vh 20px;
 }
 
+/** Card Layouts **/
 .card {
   display: flex;
   flex-direction: column;
   width: 93%;
-  max-width: 570px;
-  border-radius: 10px;
+  max-width: 500px;
+  border-radius: 8px;
   overflow: hidden;
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
   .card {
     flex-direction: row-reverse;
-    max-width: 1250px;
+    max-width: 1400px;
   }
 
   .card > * {
@@ -73,12 +75,14 @@ main {
 
 .card__image {
   max-width: 100%;
+  height: 100%;
   object-fit: cover;
   vertical-align: bottom;
   position: relative;
+  filter: contrast(112%);
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
   .card__image {
     max-width: unset;
   }
@@ -91,7 +95,7 @@ main {
   width: 100%;
   height: 100%;
   background-color: var(--img-filter);
-  opacity: 0.5;
+  opacity: 0.575;
   z-index: 1;
 }
 
@@ -102,7 +106,7 @@ main {
   text-align: center;
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
   .card__prose {
     padding: 4.5rem;
     text-align: unset;
@@ -113,7 +117,7 @@ main {
   color: var(--main);
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
   .card__title {
     font-size: 2.3rem;
     max-width: 20ch;
@@ -127,7 +131,7 @@ main {
 .card__copy {
   font-size: 15px;
   line-height: 1.6;
-  margin-top: 1.375rem;
+  margin-top: 1.4rem;
 }
 
 .card__stats {
@@ -138,7 +142,7 @@ main {
   margin-top: 2.5rem;
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
   .card__body {
     max-width: 35ch;
   }
@@ -152,12 +156,13 @@ main {
 .card__stat {
   display: flex;
   flex-direction: column;
-  gap: 5px;
   color: var(--main);
+  gap: 7px;
+  letter-spacing: 0.03em;
 }
 
 .card__stat-figure {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -165,7 +170,7 @@ main {
   color: var(--main-stat-headings);
   font-family: var(--font-family-stats);
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 .attribution {
