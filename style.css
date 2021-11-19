@@ -54,9 +54,21 @@ main {
 .card {
   display: flex;
   flex-direction: column;
-  max-width: 350px;
+  width: 93%;
+  max-width: 570px;
   border-radius: 10px;
   overflow: hidden;
+}
+
+@media screen and (min-width: 1300px) {
+  .card {
+    flex-direction: row-reverse;
+    max-width: 1250px;
+  }
+
+  .card > * {
+    flex: 1;
+  }
 }
 
 .card__image {
@@ -64,6 +76,12 @@ main {
   object-fit: cover;
   vertical-align: bottom;
   position: relative;
+}
+
+@media screen and (min-width: 1300px) {
+  .card__image {
+    max-width: unset;
+  }
 }
 
 .card__image::before {
@@ -77,15 +95,29 @@ main {
   z-index: 1;
 }
 
-.card__body {
+.card__prose {
   color: var(--main-copy);
   background-color: var(--card-bg);
   padding: 2.625rem;
   text-align: center;
 }
 
+@media screen and (min-width: 1300px) {
+  .card__prose {
+    padding: 4.5rem;
+    text-align: unset;
+  }
+}
+
 .card__title {
   color: var(--main);
+}
+
+@media screen and (min-width: 1300px) {
+  .card__title {
+    font-size: 2.3rem;
+    max-width: 20ch;
+  }
 }
 
 .accent {
@@ -101,8 +133,20 @@ main {
 .card__stats {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 2rem;
   margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 1300px) {
+  .card__body {
+    max-width: 35ch;
+  }
+
+  .card__stats {
+    flex-direction: row;
+    margin-top: 4.5rem;
+  }
 }
 
 .card__stat {
