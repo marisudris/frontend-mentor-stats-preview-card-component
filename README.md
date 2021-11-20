@@ -19,7 +19,7 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
 ## Overview
 
 This challenge requires us to build a responsive card component that stacks on
-smaller screeen sizes while flattening out horizontally on bigger ones. No JS is required, this
+smaller screen sizes while flattening out horizontally on bigger ones. No JS is required, this
 is a pure HTML and CSS project.
 
 ### The challenge
@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/marisudris/frontend-mentor-stats-preview-card-component)
+- Live Site URL: [GitHub Pages](https://marisudris.github.io/frontend-mentor-stats-preview-card-component/)
 
 ## My process
 
@@ -74,8 +74,8 @@ knew about but never really tried before.
 
 ### Continued development
 
-Going forward I think I'll do more research on extrinsic vs intrinsic CSS sizing and more
-on responsive images, since I left like I'm doing a little too much ad-hoc styling.
+Going forward I think I'll do more research on *extrinsic* vs *intrinsic* CSS sizing and
+on responsive images, since I left like I'm doing a little too much ad-hoc styling on them.
 
 ## Author
 
